@@ -37,6 +37,9 @@ dados_num_norm = pd.DataFrame(dados_num_norm, columns=dados_num.columns)
 
 dados_dataframe = dados_num_norm.join(dados_cat_norm)
 
+# Salvar o dataframe normalizado completo
+dados_dataframe.to_csv('dados_normalizados_obesity.csv', index=False)
+
 #HIPERPARAMETRIZAÇÃO - Determinar o número ótimos de clusters antes do treinamento
 
 from sklearn.cluster import KMeans # kmeans é um clusterizador
